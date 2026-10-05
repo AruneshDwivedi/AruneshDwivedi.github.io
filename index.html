@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <!-- RESPONSIVE: viewport meta lets CSS breakpoints work on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arunesh Dwivedi | DevOps &amp; Platform Engineer</title>
+  <meta name="description" content="Arunesh Dwivedi, DevOps and Platform Engineer. AWS, Kubernetes, Terraform, Go. 28 merged open-source PRs. Portfolio, projects and engineering blog." />
+  <meta name="theme-color" content="#080c10" />
+  <meta property="og:title" content="Arunesh Dwivedi | DevOps & Platform Engineer" />
+  <meta property="og:description" content="Production infrastructure, automation and open-source contributions to Kubernetes tooling." />
+  <meta property="og:type" content="website" />
+  <!-- PERFORMANCE: preconnect + display=swap so text renders immediately with a fallback font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23080c10'/%3E%3Ctext x='16' y='22' font-size='16' font-family='monospace' font-weight='bold' text-anchor='middle' fill='%2363d2ff'%3EAD%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- NAVIGATION -->
+  <nav aria-label="Primary">
+    <a href="#top" class="logo">AD<span>.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#opensource">Open Source</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-tools">
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle light and dark theme" title="Toggle theme">◐</button>
+      <button class="menu-toggle" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <!-- Decorative animated network background (canvas, see main.js) -->
+      <canvas id="bg" aria-hidden="true"></canvas>
+      <span class="orb orb-1" aria-hidden="true"></span><span class="orb orb-2" aria-hidden="true"></span>
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow reveal">DevOps &amp; Platform Engineer</div>
+          <h1 class="reveal" style="--d:80ms">Arunesh<span class="outline">Dwivedi</span></h1>
+          <p class="role reveal" style="--d:160ms">Infrastructure that scales, recovers, and documents itself.</p>
+          <p class="statement reveal" style="--d:240ms">
+            1+ years running production infrastructure, from provisioning and incident response to automation. I also build tooling that ships fixes into open-source Kubernetes projects: <strong>28 pull requests merged</strong> so far.
+          </p>
+          <div class="hero-actions reveal" style="--d:320ms">
+            <a href="#projects" class="btn btn-primary">View projects →</a>
+            <a href="#contact" class="btn btn-ghost">Get in touch</a>
+            <a href="assets/Arunesh_Dwivedi_Resume.pdf" class="btn btn-ghost" download>↓ Resume</a>
+          </div>
+          <div class="badges reveal" style="--d:400ms">
+            <span class="badge"><i class="dot"></i>Open to remote DevOps / SRE / Platform roles</span>
+            <span class="badge">AWS Solutions Architect – Associate</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <!-- Portrait: rotating gradient ring + floating chips. Tilts toward the
+               pointer on desktop (see main.js section 11). Photo is 720px wide WebP
+               with a JPG fallback, ~30 KB, so it does not slow first paint. -->
+          <figure class="portrait reveal" style="--d:200ms" id="portrait">
+            <div class="portrait-tilt">
+              <span class="ring" aria-hidden="true"></span>
+              <picture>
+                <source srcset="assets/photo.webp" type="image/webp">
+                <img src="assets/photo.jpg" width="720" height="900" alt="Portrait of Arunesh Dwivedi in a navy blazer" fetchpriority="high" decoding="async">
+              </picture>
+              <span class="chip chip-a" aria-hidden="true"><i class="dot"></i>28 PRs merged</span>
+              <span class="chip chip-b" aria-hidden="true">AWS · SAA</span>
+              <span class="chip chip-c" aria-hidden="true">Go · K8s · Terraform</span>
+            </div>
+          </figure>
+
+          <!-- Typed terminal. Lines are defined in main.js (TERM_LINES). -->
+          <div class="terminal reveal" style="--d:300ms" aria-hidden="true">
+            <div class="term-bar"><i></i><i></i><i></i><small>arunesh@platform ~</small></div>
+            <div class="term-body" id="termBody"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats reveal" style="--d:200ms">
+        <div class="stat"><b data-count="28">0</b><span>Merged upstream PRs</span></div>
+        <div class="stat"><b data-count="25" data-suffix="+">0</b><span>OSS projects touched</span></div>
+        <div class="stat"><b data-count="1" data-suffix="+">0</b><span>Years in production ops</span></div>
+        <div class="stat"><b>SAA</b><span>AWS Certified</span></div>
+      </div>
+    </section>
+
+    <!-- TECH MARQUEE: pure CSS infinite scroll; the list is duplicated so the loop is seamless -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>AWS</span><span>Kubernetes</span><span>Terraform</span><span>Go</span><span>Helm</span><span>Jenkins</span><span>Ansible</span><span>Prometheus</span><span>Grafana</span><span>Docker</span><span>Python</span><span>Bash</span><span>GitHub Actions</span><span>Linux</span>
+        <span>AWS</span><span>Kubernetes</span><span>Terraform</span><span>Go</span><span>Helm</span><span>Jenkins</span><span>Ansible</span><span>Prometheus</span><span>Grafana</span><span>Docker</span><span>Python</span><span>Bash</span><span>GitHub Actions</span><span>Linux</span>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="alt">
+      <div class="container about-grid">
+        <div class="about-text">
+          <div class="label reveal">About</div>
+          <h2 class="title reveal">I make operations boring, on purpose.</h2>
+          <p class="reveal">I'm a <strong>DevOps and Platform Engineer</strong> at Ole Solutions, where I run client infrastructure on Yandex Cloud: provisioning, access control, DNS and firewall configuration, deployment validation and live incident response.</p>
+          <p class="reveal">Alongside that, I built an automation pipeline that finds bugs in open-source infrastructure tools, drafts Go fixes, and submits them upstream <strong>only after human review</strong>. Most fixes turn silent failures and panics into clear, actionable errors.</p>
+          <p class="reveal">I hold an <strong>M.S. in AI &amp; Cloud Computing</strong> and a B.Tech in Computer Science &amp; IT from Lobachevsky State University (top 10% of class in both), and I write about cloud and DevOps fundamentals on Hashnode.</p>
+        </div>
+        <div class="cert-list">
+          <div class="cert reveal"><em>☁</em><div><b>AWS Certified Solutions Architect – Associate</b><small>Cloud architecture</small></div></div>
+          <div class="cert reveal" style="--d:80ms"><em>🎖</em><div><b>AWS Community Builder</b><small>Machine Learning track, 2024</small></div></div>
+          <div class="cert reveal" style="--d:160ms"><em>🎓</em><div><b>M.S. AI &amp; Cloud Computing</b><small>Lobachevsky State University, 2023–2025</small></div></div>
+          <div class="cert reveal" style="--d:240ms"><em>✍</em><div><b>Technical writing</b><small>Hashnode: cloud &amp; DevOps fundamentals</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <div class="label reveal">Skills</div>
+        <h2 class="title reveal">Technical stack</h2>
+        <p class="lede reveal">Grouped by what I use them for. Everything listed has been used in a project or in production on this page.</p>
+        <div class="skills-grid">
+          <div class="skill reveal"><h3>☁ Cloud (AWS)</h3><p>Architecture and operations</p><div class="tags"><span class="tag">EC2</span><span class="tag">VPC</span><span class="tag">IAM</span><span class="tag">ALB</span><span class="tag">Auto Scaling</span><span class="tag">RDS</span><span class="tag">S3</span><span class="tag">CloudWatch</span><span class="tag">Route 53</span></div></div>
+          <div class="skill reveal" style="--d:60ms"><h3>🛠 Infrastructure as Code</h3><p>Reusable, reviewable infrastructure</p><div class="tags"><span class="tag">Terraform</span><span class="tag">Modules</span><span class="tag">State</span><span class="tag">Ansible</span></div></div>
+          <div class="skill reveal" style="--d:120ms"><h3>⎈ Containers &amp; Orchestration</h3><p>Packaging, scheduling, scaling</p><div class="tags"><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Helm</span><span class="tag">NGINX Ingress</span><span class="tag">HPA</span></div></div>
+          <div class="skill reveal"><h3>⚙ CI/CD</h3><p>From commit to verified release</p><div class="tags"><span class="tag">Jenkins</span><span class="tag">GitHub Actions</span><span class="tag">Git</span><span class="tag">Pipeline-as-code</span></div></div>
+          <div class="skill reveal" style="--d:60ms"><h3>📈 Observability</h3><p>Know before users do</p><div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">CloudWatch Logs</span><span class="tag">journald / syslog</span></div></div>
+          <div class="skill reveal" style="--d:120ms"><h3>⌨ Languages &amp; Systems</h3><p>Automation and the OS beneath it</p><div class="tags"><span class="tag">Go</span><span class="tag">Python</span><span class="tag">Bash</span><span class="tag">Linux / systemd</span><span class="tag">DNS</span><span class="tag">TCP/IP</span><span class="tag">Routing</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS (rendered from js/data.js) -->
+    <section id="projects" class="alt">
+      <div class="container">
+        <div class="label reveal">Projects</div>
+        <h2 class="title reveal">Production-minded work</h2>
+        <p class="lede reveal">Open any card for the architecture diagram, what was built, the stack, and links. Filter by area below.</p>
+        <div class="filters reveal" id="filters" role="group" aria-label="Filter projects"></div>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- OPEN SOURCE -->
+    <section id="opensource">
+      <div class="container oss-grid">
+        <div>
+          <div class="label reveal">Open source</div>
+          <div class="oss-big reveal" aria-label="28 merged pull requests"><span data-count="28">0</span><small>pull requests merged upstream</small></div>
+          <p class="reveal" style="color:var(--muted);margin-top:22px;font-size:13.5px">Across 25+ production infrastructure projects. Every submission is human-reviewed and AI assistance is disclosed.</p>
+          <div class="repos tags reveal">
+            <span class="tag g">Argo Rollouts</span><span class="tag g">Kong</span><span class="tag g">Apache Solr Operator</span><span class="tag g">APISIX Ingress</span><span class="tag g">VictoriaMetrics Operator</span><span class="tag g">OpenSearch k8s Operator</span><span class="tag g">Buildkite CLI</span><span class="tag g">ClickHouse Operator</span><span class="tag g">helm-unittest</span><span class="tag g">Porter</span>
+          </div>
+          <div class="links reveal"><a class="btn btn-ghost" target="_blank" rel="noopener" href="https://github.com/search?q=author%3AAruneshDwivedi+is%3Apr+is%3Amerged&type=pullrequests">See merged PRs →</a></div>
+        </div>
+        <div class="fix-list">
+          <div class="fix reveal"><b>Argo Rollouts: controller panic</b><p>An anti-affinity nil-check removed a panic that halted progressive delivery.</p></div>
+          <div class="fix reveal" style="--d:80ms"><b>Apache Solr Operator: rolling updates</b><p>Fixed logic that mishandled already-deleted pods, unblocking safe restarts for stateful workloads.</p></div>
+          <div class="fix reveal" style="--d:160ms"><b>Buildkite CLI: truncated results</b><p>Cluster-secret listing now paginates instead of silently truncating.</p></div>
+          <div class="fix reveal" style="--d:240ms"><b>The common thread</b><p>Silent failures and panics become structured, actionable errors.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="alt">
+      <div class="container">
+        <div class="label reveal">Experience</div>
+        <h2 class="title reveal">Work history</h2>
+        <div class="timeline">
+          <div class="t-item reveal">
+            <div class="t-date">June 2025 – Present</div>
+            <div class="t-role">DevOps Engineer</div>
+            <div class="t-co">Ole Solutions · Pune, India (Remote)</div>
+            <ul>
+              <li>Built Bash and Python automation for provisioning, deployment and health checks, replacing manual runbook steps and cutting hands-on effort per release.</li>
+              <li>Administered client infrastructure on Yandex Cloud: server provisioning, SSH key and sudo access control, deployment validation, DNS, firewall and routing.</li>
+              <li>Ran incident response on live client systems: triage, root-cause analysis via systemd state and journald/syslog, remediation and post-incident write-ups.</li>
+              <li>Hardened access policies and service configuration at the start of each engagement, and wrote the runbooks that made recurring fixes repeatable.</li>
+            </ul>
+          </div>
+          <div class="t-item reveal">
+            <div class="t-date">May 2023 – Aug 2023</div>
+            <div class="t-role">Software Development Intern</div>
+            <div class="t-co">Itgeo · Russia</div>
+            <ul>
+              <li>Built backend features in Python on a distributed Agile team.</li>
+              <li>Containerised dev environments with Docker and automated local setup with shell scripting.</li>
+              <li>Diagnosed application issues through debugging, log analysis and environment validation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG (rendered from js/data.js) -->
+    <section id="blog">
+      <div class="container">
+        <div class="label reveal">Blog</div>
+        <h2 class="title reveal">Engineering notes</h2>
+        <p class="lede reveal">What I learn while running infrastructure and contributing upstream. Click a post to read it without leaving the page.</p>
+        <div class="blog-grid" id="blogGrid"></div>
+        <div class="links reveal"><a class="btn btn-ghost" href="https://kushald.hashnode.dev" target="_blank" rel="noopener">More on Hashnode →</a></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="alt">
+      <div class="container contact-grid">
+        <div>
+          <div class="label reveal">Contact</div>
+          <h2 class="contact-head reveal">Let's build something <em>reliable.</em></h2>
+          <p class="reveal" style="color:var(--muted)">I'm looking for remote DevOps, SRE, Platform and Cloud Engineering roles, especially on teams that value automation and reliability. Send a message and I'll reply by email.</p>
+          <div class="contact-links">
+            <a class="c-link reveal" href="mailto:arunesh.devops@gmail.com"><i>@</i><span><small>Email</small>arunesh.devops@gmail.com</span></a>
+            <a class="c-link reveal" href="https://linkedin.com/in/aruneshdwivedi" target="_blank" rel="noopener"><i>in</i><span><small>LinkedIn</small>linkedin.com/in/aruneshdwivedi</span></a>
+            <a class="c-link reveal" href="https://github.com/AruneshDwivedi" target="_blank" rel="noopener"><i>GH</i><span><small>GitHub</small>github.com/AruneshDwivedi</span></a>
+          </div>
+        </div>
+
+        <!-- CONTACT FORM: validated in main.js; submission target set in js/config.js -->
+        <form id="contactForm" class="reveal" novalidate aria-label="Contact form">
+          <div class="row2">
+            <div class="field"><label for="cf-name">Name</label><input id="cf-name" name="name" autocomplete="name" required /><span class="err" aria-live="polite"></span></div>
+            <div class="field"><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" autocomplete="email" required /><span class="err" aria-live="polite"></span></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label for="cf-company">Company (optional)</label><input id="cf-company" name="company" autocomplete="organization" /></div>
+            <div class="field"><label for="cf-topic">Topic</label>
+              <select id="cf-topic" name="topic"><option>Job opportunity</option><option>Contract / freelance</option><option>Open-source collaboration</option><option>Something else</option></select></div>
+          </div>
+          <div class="field"><label for="cf-msg">Message</label><textarea id="cf-msg" name="message" required minlength="20"></textarea><span class="err" aria-live="polite"></span></div>
+          <!-- Honeypot: real users never see or fill this; bots do -->
+          <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button class="btn btn-primary" type="submit" id="sendBtn">Send message →</button>
+          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>© 2026 Arunesh Dwivedi</div>
+    <div>Built with <span>♥</span>, plain HTML/CSS/JS. No frameworks, no trackers.</div>
+  </footer>
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+  <!-- Project modal -->
+  <div class="overlay" id="projectOverlay" aria-hidden="true">
+    <div class="panel" role="dialog" aria-modal="true" aria-labelledby="pm-title">
+      <button class="panel-close" data-close aria-label="Close project">✕</button>
+      <div class="panel-body" id="projectBody"></div>
+    </div>
+  </div>
+
+  <!-- Blog reader -->
+  <div class="overlay" id="blogOverlay" aria-hidden="true">
+    <div class="panel" role="dialog" aria-modal="true" aria-label="Blog post">
+      <button class="panel-close" data-close aria-label="Close post">✕</button>
+      <div class="panel-body" id="blogBody"></div>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

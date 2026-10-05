@@ -1,0 +1,63 @@
+                                           ARUNESH DWIVEDI
+                                DevOps & Platform Engineer – AWS · Kubernetes · Terraform · Go
+                                      Pune, India • +91 63754 64347 • arunesh.devops@gmail.com
+                       github.com/AruneshDwivedi • linkedin.com/in/aruneshdwivedi • aruneshdwivedi.github.io
+
+DevOps engineer with 1+ years running production infrastructure at Ole Solutions – provisioning, incident response, and automation
+on Yandex Cloud. Built an automated pipeline that reviews and ships fixes into open-source Kubernetes tooling (Argo Rollouts,
+Kong, VictoriaMetrics, and others), with 28 PRs merged so far. AWS Certified Solutions Architect – Associate, M.S. in AI & Cloud
+Computing.
+EXPERIENCE
+DevOps Engineer                                                                                                   June 2025 – Present
+Ole Solutions, Pune, India (Remote)
+• Built Bash and Python automation for provisioning, deployment, and health-check workflows, replacing manual runbook steps
+  with repeatable scripts and cutting hands-on effort per release.
+• Administered client cloud infrastructure on Yandex Cloud end to end: server provisioning, SSH key and sudo access control,
+  deployment validation, and DNS, firewall, and routing configuration.
+• Ran incident response on live client systems: triage, root-cause analysis via systemd service state and journald/syslog inspec-
+  tion, remediation, and post-incident write-ups that fed back into the automation.
+• Established the operational baseline on each engagement by hardening access policies and service configuration, and authored
+  the runbooks that made recurring fixes repeatable process rather than tribal knowledge.
+Software Development Intern                                                                                      May 2023 – Aug 2023
+Itgeo, Russia
+• Built backend features in Python on a distributed Agile team; containerized dev environments with Docker and automated local
+  setup with shell scripting.
+• Diagnosed application issues through debugging, log analysis, and environment validation during development and testing.
+
+SYSTEMS & AUTOMATION PROJECTS
+AI-Assisted OSS Contribution Pipeline (personal project)
+• Designed and built a two-phase automation pipeline – autonomous draft, then manually triggered, human-reviewed publish –
+  that finds bugs in open-source infrastructure tooling, implements Go fixes, and submits them upstream under mandatory human
+  review.
+• Pipeline has produced 28 merged pull requests across 25+ production infrastructure projects, including Argo Rollouts, Kong,
+  Apache Solr Operator, APISIX Ingress Controller, VictoriaMetrics Operator, OpenSearch k8s Operator, Buildkite CLI, Click-
+  House Operator, helm-unittest, and Porter – mostly fixes that turn silent failures and panics into structured, actionable errors.
+• Representative fixes reviewed and shipped: Apache Solr Operator rolling-update logic that mishandled already-deleted pods,
+  unblocking safe restarts for stateful workloads; an Argo Rollouts anti-affinity nil-check that eliminated a controller panic halting
+  progressive delivery; Buildkite CLI cluster-secret listing corrected to paginate instead of truncating results.
+• Rebuilt the pipeline’s review model after identifying that an earlier version wasn’t transparent enough for open-source norms –
+  added a post-submission CI monitoring loop and shifted to disclosure-by-default, human-gated submission.
+Scalable Three-Tier AWS Infrastructure Terraform · VPC · ALB · RDS                                      terraform-aws-scalable-webapp
+• Multi-AZ architecture composed from reusable Terraform modules (network, compute, ALB, RDS); diagnosed and documented
+  live deployment failures across ALB routing, EC2 user_data, and security group rules.
+Kubernetes Deployment & Monitoring Stack Kubernetes · Helm · Prometheus                                     k8s-production-deployment
+• Containerized service deployed via Helm behind NGINX Ingress; validated HPA scaling from 2 → 5 replicas under load, with
+  Prometheus and Grafana dashboards for cluster and application health.
+Jenkins CI/CD Pipeline on AWS Jenkins · Terraform · Ansible                                                           aws-nodejs-cicd
+• End-to-end pipeline covering automated provisioning, configuration management, deployment, and one-step rollback to the last
+  known-good release.
+TECHNICAL SKILLS
+• Cloud (AWS): EC2, VPC, IAM, ALB, Auto Scaling, RDS, S3, CloudWatch, Route 53
+• Infrastructure as Code: Terraform (modules, state, reusable environments), Ansible
+• Containers & Orchestration: Docker, Kubernetes, Helm, NGINX Ingress, Horizontal Pod Autoscaler
+• CI/CD & Observability: Jenkins, GitHub Actions, Git · Prometheus, Grafana, CloudWatch Logs
+• Languages & Systems: Go, Python, Bash · Linux administration, DNS, TCP/IP, routing, security groups
+
+EDUCATION
+M.S., Artificial Intelligence & Cloud Computing · Lobachevsky State University, Russia                                    2023 – 2025
+B.Tech., Computer Science & Information Technology · Lobachevsky State University, Russia                                 2019 – 2023
+Graduated in the top 10% of class across both programs.
+CERTIFICATIONS & COMMUNITY
+AWS Certified Solutions Architect – Associate • AWS Community Builder, Machine Learning (2024) • Technical writing on cloud
+and DevOps fundamentals at kushald.hashnode.dev
+
